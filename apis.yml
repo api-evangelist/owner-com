@@ -1,0 +1,46 @@
+aid: owner-com
+url: https://raw.githubusercontent.com/api-evangelist/owner-com/refs/heads/main/apis.yml
+name: Owner.com
+kind: company
+description: Owner.com is an all-in-one, done-for-you digital platform for
+  independent restaurants - an AI-built website with SEO, commission-free online
+  and direct ordering, a branded mobile app, email/SMS and push marketing,
+  automated campaigns, a loyalty and rewards program, plus delivery and catering
+  management and reporting - sold as a per-location monthly subscription.
+  Owner.com is a closed SaaS product operated as a managed service for small and
+  independent restaurant operators. It does NOT publish a public or partner
+  developer API, SDK, or developer portal, and exposes no documented,
+  self-serve, programmatic endpoints. It advertises "POS integrations" (Toast,
+  Clover, Square) and payment integrations (Stripe, Apple Pay, Google Pay), but
+  these are configured by Owner.com's own team as part of onboarding rather than
+  offered as documented API surfaces to third-party developers. As of this
+  writing there is no programmatic API to model - this entry is documented
+  honestly as a no-public-API provider.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Restaurants
+- Online Ordering
+- Restaurant Marketing
+- Loyalty
+- Website Builder
+- Food and Beverage
+- SMB
+- SaaS
+- No Public API
+created: '2026-07-04'
+modified: '2026-07-04'
+specificationVersion: '0.19'
+common:
+- type: Website
+  url: https://www.owner.com
+- type: LinkedIn
+  url: https://www.linkedin.com/company/owner-com
+- type: Documentation
+  url: https://help.owner.com
+- type: Pricing
+  url: https://www.owner.com/pricing
+- type: Plans
+  url: plans/owner-com-plans-pricing.yml
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

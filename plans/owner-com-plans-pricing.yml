@@ -1,0 +1,139 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Owner.com
+providerId: owner-com
+created: '2026-07-04'
+modified: '2026-07-04'
+reconciled: false
+tags:
+- Restaurants
+- Online Ordering
+- SaaS
+- SMB
+- Plans
+description: >-
+  These are Owner.com PLATFORM subscription plans, NOT API access plans -
+  Owner.com does not publish a developer API. Owner.com is sold as a
+  month-to-month, per-location subscription (no long-term contract) that bundles
+  the full product: AI website + SEO, commission-free online/direct ordering,
+  branded mobile app, email/SMS/push marketing, loyalty and rewards, and
+  delivery and catering management. Publicly reported plans as of mid-2026 are a
+  lower-cost "Flex" plan with a per-order fee and a higher-cost "Flat-Rate" plan
+  with no per-order commission, plus one-time implementation and per-additional-
+  location fees. Multi-location operators are quoted custom rates. Exact figures
+  vary by source and by deal - verify on the Owner.com pricing page during
+  reconciliation.
+notes: >-
+  Owner.com has no separate API fee because it exposes no public API. Guest-side
+  order support fees (~5%) and per-delivery pass-through costs (~$7) are borne by
+  the guest or the restaurant and are transactional, not part of the subscription
+  tier. Confirm current pricing and any changes on the Owner.com pricing page.
+sources:
+- https://www.owner.com/pricing
+- https://www.owner.com/
+- https://www.getsauce.com/post/owner-com-pricing-fees
+plans:
+- id: owner-flex
+  name: Flex Plan
+  type: paid
+  description: >-
+    Lower monthly base with a per-order fee. Includes the full Owner.com
+    platform - website, SEO, online/direct ordering, branded mobile app,
+    marketing, loyalty, delivery and catering management.
+  entries:
+  - label: Monthly Subscription
+    name: flex_subscription
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: US
+    unit: 1
+    price: ~$249/month per location
+    userMultiplied: false
+  - label: Per-Order Fee
+    name: flex_per_order_fee
+    type: usage
+    metric: orders
+    limit: -1
+    timeFrame: month
+    geo: US
+    unit: 1
+    price: ~5% per order
+    userMultiplied: false
+  elements:
+  - name: AI Website and SEO
+  - name: Commission-Free Online and Direct Ordering
+  - name: Branded Mobile App
+  - name: Email, SMS, and Push Marketing
+  - name: Loyalty and Rewards
+  - name: Delivery and Catering Management
+- id: owner-flat-rate
+  name: Flat-Rate Plan
+  type: paid
+  description: >-
+    Higher monthly base with no per-order commission. Same full platform as the
+    Flex plan, optimized for higher-volume restaurants that prefer predictable
+    flat pricing.
+  entries:
+  - label: Monthly Subscription
+    name: flat_subscription
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: US
+    unit: 1
+    price: ~$499/month per location
+    userMultiplied: false
+  - label: Per-Order Fee
+    name: flat_per_order_fee
+    type: flat
+    metric: orders
+    limit: -1
+    timeFrame: month
+    geo: US
+    unit: 1
+    price: $0 (no per-order commission)
+    userMultiplied: false
+  elements:
+  - name: AI Website and SEO
+  - name: Commission-Free Online and Direct Ordering
+  - name: Branded Mobile App
+  - name: Email, SMS, and Push Marketing
+  - name: Loyalty and Rewards
+  - name: Delivery and Catering Management
+- id: owner-implementation
+  name: Implementation and Additional Locations
+  type: paid
+  description: >-
+    One-time setup/implementation fee to onboard a restaurant onto the platform,
+    plus a per-additional-location fee for multi-location operators.
+  entries:
+  - label: Implementation (One-Time)
+    name: implementation_fee
+    type: flat
+    metric: contract
+    limit: -1
+    timeFrame: onetime
+    geo: US
+    unit: 1
+    price: ~$1,000 one-time
+    userMultiplied: false
+  - label: Additional Location
+    name: additional_location_fee
+    type: flat
+    metric: location
+    limit: -1
+    timeFrame: month
+    geo: US
+    unit: 1
+    price: ~$299 per additional location
+    userMultiplied: false
+  elements:
+  - name: Onboarding and Site Build
+  - name: Multi-Location Setup
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

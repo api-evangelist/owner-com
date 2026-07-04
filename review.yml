@@ -1,0 +1,87 @@
+aid: owner-com
+name: Owner.com
+review:
+  question: Does Owner.com expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-04'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Owner.com does not publish any public
+    developer API of any kind - REST, GraphQL, webhook, SSE, or WebSocket -
+    so there is no protocol surface (server-push or otherwise) to model.
+    Owner.com is a closed, done-for-you SaaS platform for independent
+    restaurants; all data flows happen inside the managed product and its
+    vendor-configured POS/payment integrations, none of which are exposed as
+    documented endpoints to third-party developers.
+findings:
+  summary: |
+    Owner.com does not publish a documented public WebSocket API - or any
+    public/partner developer API at all. Owner.com is an all-in-one, managed
+    SaaS platform for independent restaurants (AI website + SEO, commission-free
+    online/direct ordering, branded mobile app, email/SMS/push marketing,
+    loyalty and rewards, delivery and catering, reporting), sold as a
+    per-location monthly subscription. It is a fully done-for-you service aimed
+    at non-technical operators. There is no developer portal, no API reference,
+    no published OpenAPI/GraphQL/AsyncAPI specification, no self-serve API keys
+    or OAuth app registration, and no documented webhook or WebSocket
+    (ws:// / wss://) endpoint. Owner.com advertises POS integrations (Toast,
+    Clover, Square) and payment integrations (Stripe, Apple Pay, Google Pay),
+    but these are provisioned and configured by Owner.com's own onboarding team
+    rather than offered as documented programmatic surfaces. Integration
+    inquiries are routed to support (support@owner.com) or a "Partner with
+    Owner" channel, not to API docs.
+  openSource: |
+    Owner.com is proprietary, closed-source commercial SaaS. There is no public
+    source code repository, no self-hostable component, and no public GitHub
+    organization associated with the product.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: No public REST API is documented. The product is consumed only through Owner.com's own web dashboard, mobile apps, and hosted restaurant sites.
+    - protocol: GraphQL
+      scheme: https
+      documented: false
+      note: No public GraphQL endpoint is documented.
+    - protocol: Webhook
+      scheme: https
+      documented: false
+      note: No public, self-serve webhook subscription surface is documented for third parties.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented anywhere in Owner.com's public materials as of the review date.
+  endpointsConfirmedRest: []
+  endpointsModeled: none
+  integrationsNote: |
+    Owner.com lists POS integrations (Toast, Clover, Square) and payment
+    integrations (Stripe, Apple Pay, Google Pay). These are configured by
+    Owner.com internally during onboarding and are not exposed as documented,
+    developer-callable API endpoints. They do not constitute a public API.
+sources:
+  - url: https://www.owner.com/
+    type: Website
+    note: Product overview - website/SEO, ordering, mobile app, marketing, loyalty, delivery, catering, POS integrations. No developer API disclosed.
+  - url: https://help.owner.com/
+    type: Documentation
+    note: Help center. Integrations category exists but no API keys, webhooks, or programmatic integration are documented.
+  - url: https://www.owner.com/pricing
+    type: Pricing
+    note: Per-location subscription plans (Flex ~$249/mo + fees, Flat-Rate ~$499/mo). Platform pricing, not API pricing.
+  - url: https://en.wikipedia.org/wiki/Owner.com
+    type: Reference
+    note: Company background, founding, funding; describes the SaaS ordering/marketing platform. No public API mentioned.
+  - url: https://www.linkedin.com/company/owner-com
+    type: LinkedIn
+    note: Company profile - "the AI platform restaurants use to win online." No developer/API program referenced.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No public API surface of any kind exists to catalog, and specifically no
+    WebSocket protocol surface. The apis.yml documents Owner.com honestly as a
+    no-public-API provider (no apis: entries), capturing the company, website,
+    help center, LinkedIn, and subscription pricing. No AsyncAPI document was
+    created because Owner.com exposes no server-push transport - or any
+    programmatic transport - on a public API to model.
