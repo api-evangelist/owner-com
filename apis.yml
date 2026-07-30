@@ -16,7 +16,19 @@ description: Owner.com is an all-in-one, done-for-you digital platform for
   offered as documented API surfaces to third-party developers. As of this
   writing there is no programmatic API to model - this entry is documented
   honestly as a no-public-API provider.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/owner-com.png
 tags:
 - Restaurants
 - Online Ordering
