@@ -142,3 +142,42 @@ plans:
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - hybrid
+  - subscription
+  units:
+  - negotiated
+  - object
+  - transaction
+  plans:
+  - name: Flex Plan
+    access: paid
+    model: hybrid
+    model_how: derived
+    units:
+    - object
+    - transaction
+    periods:
+    - month
+  - name: Flat-Rate Plan
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - object
+    - transaction
+    periods:
+    - month
+  - name: Implementation and Additional Locations
+    access: paid
+    model: subscription
+    model_how: derived
+    units:
+    - negotiated
+    - object
+    periods:
+    - month
+    - one-time
