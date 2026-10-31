@@ -1,4 +1,4 @@
-# Owner.com (owner-com)
+# Owner.com
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,60 +64,88 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Owner.com is an all-in-one, done-for-you digital platform for independent restaurants. A single per-location subscription bundles an AI-built restaurant website with SEO, commission-free online and direct ordering, a branded mobile app, email/SMS and push marketing with automated campaigns, a loyalty and rewards program, delivery and catering management, and reporting and analytics. The company (Palo Alto, CA; founded 2018 as ProfitBoss, rebranded to Owner.com in 2021) positions itself as the platform independent restaurants use to win online and reduce dependence on third-party delivery marketplaces.
+Owner.com is an all-in-one, done-for-you digital platform for independent restaurants - an AI-built website with SEO, commission-free online and direct ordering, a branded mobile app, email/SMS and push marketing, automated campaigns, a loyalty and rewards program, plus delivery and catering management and reporting - sold as a per-location monthly subscription. Owner.com is a closed SaaS product operated as a managed service for small and independent restaurant operators. It does NOT publish a public or partner developer API, SDK, or developer portal, and exposes no documented, self-serve, programmatic endpoints. It advertises "POS integrations" (Toast, Clover, Square) and payment integrations (Stripe, Apple Pay, Google Pay), but these are configured by Owner.com's own team as part of onboarding rather than offered as documented API surfaces to third-party developers. As of this writing there is no programmatic API to model - this entry is documented honestly as a no-public-API provider.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/owner-com/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/owner-com/refs/heads/main/apis.yml)
+**Areas:** Restaurant · Online Ordering · Restaurant Marketing · Loyalty · Website Builder · Food and Beverage · Small Business · Software-as-a-Service
 
-## API Access Model
+## Owner.com on APIs.io
 
-**Owner.com does not expose a public or partner developer API.** It is a closed, managed SaaS product built for non-technical restaurant operators as a fully done-for-you service. There is:
+Everything profiled for Owner.com is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/owner-com/](https://apis.io/providers/owner-com/)** — or go straight to one of the APIs or properties below.
 
-- No developer portal, API reference, or published OpenAPI/GraphQL/AsyncAPI specification.
-- No self-serve API keys, OAuth application registration, or webhook subscription surface for third parties.
-- No public SDK or CLI.
+### Published properties
 
-Owner.com markets **POS integrations** (Toast, Clover, Square) and **payment integrations** (Stripe, Apple Pay, Google Pay), but these are provisioned and configured by Owner.com's own onboarding/support team rather than offered as documented, programmatic endpoints that outside developers can call. Prospective integrators are directed to Owner.com support (`support@owner.com`, 1-844-246-9637) or the "Partner with Owner" channel, not to API documentation.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-This repository is therefore an **honest stub**: it documents Owner.com as a real, notable provider in the restaurant technology space that currently has **no public API surface to catalog**. The `apis.yml` intentionally lists no `apis:` entries. If Owner.com later publishes a developer API, this entry should be revisited and expanded with real, sourced endpoints.
+#### Security (1)
 
-## Tags
+Authentication, trust centre, and vulnerability disclosure.
 
-- Restaurants
-- Online Ordering
-- Restaurant Marketing
-- Loyalty
-- Website Builder
-- Food and Beverage
-- SMB
-- SaaS
-- No Public API
+- [Owner Com Domain Security](https://apis.io/security/owner-com/owner-com-domain-security/)
 
-## Timestamps
+#### Plans and pricing (1)
 
-- **Created:** 2026-07-04
-- **Modified:** 2026-07-04
+Published plans, tiers and prices.
 
-## Pricing (Platform Subscription, not API)
+- [Owner Com Plans Pricing](https://apis.io/plans/owner-com/owner-com-plans-pricing/)
 
-Owner.com is sold as a month-to-month per-location subscription (no long-term contract). Publicly reported plans as of mid-2026:
+## Where to find this API
 
-- **Flex Plan** — ~$249/month plus a ~5% per-order fee.
-- **Flat-Rate Plan** — ~$499/month with no per-order commission.
-- **Setup/implementation** — ~$1,000 one-time; ~$299 for each additional location.
-- **Guest order support fee** — ~5% charged to the guest on direct orders.
-- **Delivery** — zero-commission model, flat ~$7 per delivery passed to the restaurant.
-
-These are platform/subscription plans, not API access plans. See [plans/owner-com-plans-pricing.yml](plans/owner-com-plans-pricing.yml). Verify current rates on the [Owner.com pricing page](https://www.owner.com/pricing) during reconciliation.
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.owner.com)
-- [LinkedIn](https://www.linkedin.com/company/owner-com)
-- [Documentation / Help Center](https://help.owner.com)
+- [Documentation](https://help.owner.com)
 - [Pricing](https://www.owner.com/pricing)
-- [Plans](plans/owner-com-plans-pricing.yml)
+- [Blog](https://www.owner.com/blog)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 9.5** — minimal · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 11.9 |
+| Access clarity | 18.4 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/owner-com/](https://apis.io/providers/owner-com/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Owner.com: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/owner-com/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
